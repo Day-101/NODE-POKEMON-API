@@ -5,6 +5,11 @@ const port = 3000;
 
 app.get("/", (req, res) => res.send("Hello express!"));
 
+app.get("/api/pokemons/:id", (req, res) => {
+  const id = req.params.id;
+  res.send(`Vous avez demandé le pokemon n°${id}`);
+});
+
 app.listen(port, () =>
   console.log(`Application lauched on : http://localhost:${port}`)
 );
