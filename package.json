@@ -1,7 +1,7 @@
 {
   "name": "node-pokemon-api",
   "version": "1.0.0",
-  "description": "An awesome API Rest to handle some pokemons.",
+  "description": "An awesome API Rest to handle some pokemons create by Simon DIENY and remade by Day SY.",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
