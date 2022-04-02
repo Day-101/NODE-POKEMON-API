@@ -12,6 +12,12 @@ app.get("/api/pokemons/:id", (req, res) => {
   res.send(`Vous avez demandé le pokemon ${pokemon.name}`);
 });
 
+app.get("/api/pokemons", (req, res) => {
+  res.send(
+    `Il y a ${pokemons.length} pokemons dans le pokedex, pour le moment.`
+  );
+});
+
 app.listen(port, () =>
   console.log(`Application lauched on : http://localhost:${port}`)
 );
