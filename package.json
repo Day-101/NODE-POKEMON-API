@@ -4,7 +4,7 @@
   "description": "An awesome API Rest to handle some pokemons create by Simon DIENY and remade by Day SY.",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "nodemon app.js"
   },
   "author": "Day SY",
   "license": "ISC",
