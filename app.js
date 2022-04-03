@@ -13,7 +13,7 @@ app.use((req, res, next) => {
 app.get("/", (req, res) => res.send("Hello express!"));
 
 app.get("/api/pokemons", (req, res) => {
-  const message = "La liste des pokemons a bien été récupérée."
+  const message = "La liste des pokemons a bien été récupérée.";
   res.json(success(message, pokemons));
 });
 
