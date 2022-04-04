@@ -8,7 +8,10 @@ let pokemons = require("./mock-pokemon");
 const app = express();
 const port = 3000;
 
-app.use(favicon(__dirname + "/favicon.ico")).use(morgan("dev"));
+app
+  .use(favicon(__dirname + "/favicon.ico"))
+  .use(morgan("dev"))
+  .use(bodyParser.json());
 
 app.get("/", (req, res) => res.send("Hello express!"));
 
