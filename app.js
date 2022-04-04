@@ -23,6 +23,14 @@ app.get("/api/pokemons/:id", (req, res) => {
   res.json(success(message, pokemon));
 });
 
+app.post("/api/pokemons", (req, res) => {
+  const id = getUniqueId;
+  const pokemonCreated = { ...req.body, ...{ id, created: new Date() } };
+  pokemons.push(pokemonCreated);
+  const message = `Le pokemon ${pokemonCreated.name} a bien été crée.`;
+  res.json(success(message, pokemonCreated));
+});
+
 app.listen(port, () =>
   console.log(`Application lauched on : http://localhost:${port}`)
 );
