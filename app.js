@@ -1,6 +1,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const favicon = require("serve-favicon");
+const bodyParser = require("body-parser");
 const { success, getUniqueId } = require("./helper.js");
 let pokemons = require("./mock-pokemon");
 
