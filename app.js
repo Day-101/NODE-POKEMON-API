@@ -2,7 +2,7 @@ const express = require("express");
 const morgan = require("morgan");
 const favicon = require("serve-favicon");
 const bodyParser = require("body-parser");
-const sequelize = require("sequelize");
+const sequelize = require("./src/db/sequelize");
 
 const app = express();
 const port = 3000;
