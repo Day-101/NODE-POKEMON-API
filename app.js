@@ -30,6 +30,12 @@ sequelize
 
 const Pokemon = PokemonModel(sequelize, DataTypes);
 
+sequelize
+  .sync({ force: true })
+  .then((_) =>
+    console.log('La base de données "Pokedex" a bien été synchronisée')
+  );
+
 app
   .use(favicon(__dirname + "/favicon.ico"))
   .use(morgan("dev"))
