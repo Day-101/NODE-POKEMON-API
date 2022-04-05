@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const { Sequelize } = require("sequelize");
 const { success, getUniqueId } = require("./helper.js");
 let pokemons = require("./mock-pokemon");
+const PokemonModel = require('./src/models/pokemon')
 
 const app = express();
 const port = 3000;
