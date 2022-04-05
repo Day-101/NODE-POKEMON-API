@@ -28,6 +28,8 @@ sequelize
     console.log(`Impossible de se connecter à la base de données ${error}`)
   );
 
+const Pokemon = PokemonModel(sequelize, DataTypes);
+
 app
   .use(favicon(__dirname + "/favicon.ico"))
   .use(morgan("dev"))
