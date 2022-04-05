@@ -28,7 +28,10 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         get() {
           return this.getDataValue("types").split(",");
-        }
+        },
+        set(types) {
+          this.setDataValue("types", types.join());
+        },
       },
     },
     {
