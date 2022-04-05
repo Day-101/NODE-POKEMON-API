@@ -14,7 +14,7 @@ module.exports = (app) => {
       })
       .catch((error) => {
         const message =
-          "Le pokemon na pas pu être récupéré. Réessayez dans quelques instants.";
+          "Le pokemon n'a pas pu être récupéré. Réessayez dans quelques instants.";
         res.status(500).json({ message, data: error });
       });
   });
