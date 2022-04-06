@@ -7,6 +7,7 @@ module.exports = (app) => {
       const name = req.query.name;
       return Pokemon.findAndCountAll({
         where: { name: { [Op.like]: `%${name}%` } },
+        order: ["name"],
         limit: 5,
       }).then(({ count, rows }) => {
         const message = `Il y a ${count} pokemons qui correspondent au terme de recherche ${name}.`;
